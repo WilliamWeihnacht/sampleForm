@@ -1,0 +1,13 @@
+legend {
+	color: #A0522D;
+}
+
+fieldset {
+	border-radius: 15px;
+	margin: 5px;
+	padding: 5px;
+}
+
+h1 {
+  text-shadow: 2px 2px;
+}

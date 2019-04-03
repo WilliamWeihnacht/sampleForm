@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" type="text/css" href="./research.css">
+        <title>Research Institute</title>
+    </head>
+	<body>
+        <header>
+            <h1>Research Form</h1>
+        </header>
+
+        <form action="http://localhost:3000/processForm" method="get">
+            <fieldset>
+                <legend>General Info</legend>
+                <label for="firstname">First name</label>
+                <input type="text" name="firstname" required="true"/>
+
+                <label for="lastname">Last name</label>
+                <input type="text" name="lastname" required="true"/><br>
+            
+                <label for="phoneFirstPart">Phone</label>
+                <input type="text" id="phoneFirstPart" name="phoneFirstPart" size="3" required="true"/>
+                <label for="phoneSecondPart">-</label>
+                <input type="text" id="phoneSecondPart" name="phoneSecondPart" size="3" required="true"/>
+                <label for="phoneThirdPart">-</label>
+                <input type="text" id="phoneThirdPart" name="phoneThirdPart" size="4" required="true"/>
+
+                <label>Email</label>
+                <input type="email" id="email" name="email" required="true">
+           </fieldset>
+           <fieldset>
+           <legend>Research Study Data</legend>
+           <fieldset>
+            <legend>Height/Weight/Age</legend>
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="1" max="125" required="true"/>
+        
+                <label for="heightFeet">Height</label>
+                <input type="number" id="heightFeet" name="heightFeet" min="2" max="7" required="true"/>
+                <label>Feet</label>
+                <input type="number" id="heightInches" name="heightInches" min="0" max="11" required="true">
+                <label>Inches</label>
+            
+                <label for="weight">Weight</label>
+                <input type="number" id="weight" name="weight" min="1" max="600" required="true"/>
+                <label>pounds</label>
+            </fieldset>
+            <fieldset>
+            <legend>Conditions</legend>
+                <label>Which of the following coditions are present in your family? (Check all that apply)</label><br>
+                <input type="checkbox" name="highBloodPressure" id="highBloodPressure" value="High Blood Pressure">Blood Pressure</input>
+                <input type="checkbox" name="diabetes" id="diabetes" value="Diabetes">Diabetes</input>
+                <input type="checkbox" name="glaucoma" id="glaucoma" value="Glaucoma">Glaucoma</input>
+                <input type="checkbox" name="asthma" id="asthma" value="Asthma">Asthma</input>
+                <input type="checkbox" name="none" id="none" value="None">None</input>
+            </fieldset>
+            <fieldset>
+            <legend>Time Period</legend>
+                <label>How long have you experinced thsese conditions?</label><br>
+                <input type="radio" name="period" id="r1" value="Never">Never</input>
+                <input type="radio" name="period" id="r2" value="LessThanAYear">Less than a year</input>
+                <input type="radio" name="period" id="r3" value="OneToTwoYears">One or two years</input>
+                <input type="radio" name="period" id="r4" value="MoreThanTwoYears">More than two years</input>
+            </fieldset>
+            <fieldset>
+            <legend>Study Information</legend>
+                <select name="studyType">
+                    <option value="Long Term">Long Term</option>
+                    <option value="Short Term">Short Term</option>
+                </select>
+                Assigned Study Id: <input type="text" id="firstFourDigits" name="firstFourDigits" size="4" placeholder="A123" required="true"/>-
+                <input type="text" id="secondFourDigits" name="secondFourDigits" placeholder="B456" size="4" required="true"/>
+            </fieldset>
+            <fieldset>
+            <legend>Additional Information (Comments)</legend>
+                <textarea id="comments" name="comments" rows="6" cols="40"></textarea>
+            </fieldset>
+            <fieldset>
+                <input id="submit" type="submit" onclick="submit"></input>
+                <input id="reset" type="reset"></input>
+            </fieldset>
+            </fieldset>
+        </form>
+        <footer>
+            CMSC Research Institute &reg;
+        </footer>
+        <script src="research.js"></script>
+    </body>
+</html>
